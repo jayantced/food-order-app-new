@@ -8,8 +8,8 @@ import CartItem from "./CartItem.jsx";
 
 export default function Cart() {
   const cartCtx = useContext(CartContext);
-//   console.log(cartCtx)
-  const userProgressCtx = useContext(UserProgressContext)
+  //   console.log(cartCtx)
+  const userProgressCtx = useContext(UserProgressContext);
 
   const cartTotal = cartCtx.items.reduce(
     (totalPrice, item) => totalPrice + item.quantity * item.price,
@@ -20,8 +20,16 @@ export default function Cart() {
     userProgressCtx.hideCart();
   }
 
+  function handleGoToCheckout() {
+    userProgressCtx.showCheckout();
+  }
+
   return (
-    <Modal className="cart" open={userProgressCtx.progress === "cart"}>
+    <Modal
+      className="cart"
+      open={userProgressCtx.progress === "cart"}
+      onClose={userProgressCtx.progress === "cart" ? handleHideCart : null}
+    >
       <h2>Your Cart</h2>
       <ul>
         {cartCtx.items.map((item) => (
@@ -40,7 +48,9 @@ export default function Cart() {
         <Button textOnly onClick={handleHideCart}>
           Close
         </Button>
-        {cartCtx.items.length > 0 && <Button onClick={handleHideCart}>Go to checkout</Button>}
+        {cartCtx.items.length > 0 && (
+          <Button onClick={handleGoToCheckout}>Go to checkout</Button>
+        )}
       </p>
     </Modal>
   );

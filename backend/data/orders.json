@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "items": [
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": "12.99",
+        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+        "image": "images/margherita-pizza.jpg",
+        "quantity": 1
+      }
+    ],
+    "customer": {
+      "name": "jayant singh",
+      "email": "gm@coding-home.com",
+      "street": "3/460, Opp to Nehru Enclave, Vishwas Khand, Lucknow, Uttar Pradesh 226010",
+      "postal-code": "226010",
+      "city": "lucknow"
+    },
+    "id": "943.1536876800179"
+  },
+  {
+    "items": [
+      {
+        "id": "m2",
+        "name": "Margherita Pizza",
+        "price": "12.99",
+        "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+        "image": "images/margherita-pizza.jpg",
+        "quantity": 3
+      }
+    ],
+    "customer": {
+      "name": "jayant singh",
+      "email": "vayeg73385@in2reach.com",
+      "street": "3/460, Opp to Nehru Enclave, Vishwas Khand, Lucknow, Uttar Pradesh 226010",
+      "postal-code": "226010",
+      "city": "lucknow"
+    },
+    "id": "333.5185097372815"
+  }
+]
